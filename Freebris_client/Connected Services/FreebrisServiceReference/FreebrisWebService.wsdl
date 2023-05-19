@@ -38,6 +38,62 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="IsAdmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsAdminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsAdminResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangePasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPoints">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="points" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPointsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddPointsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="text" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailResponse">
+        <s:complexType />
+      </s:element>
       <s:element name="CreateUser">
         <s:complexType>
           <s:sequence>
@@ -51,6 +107,63 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="CreateUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="table" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetIdResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPoints">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPointsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPointsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteBookResult" type="s:boolean" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -75,9 +188,9 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="dimension" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="size" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idAuthor" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idIconBook" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -109,6 +222,90 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetBooksByTitle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bookName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBooksByTitleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBooksByTitleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBooksByAuthor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authorName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBooksByAuthorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBooksByAuthorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIcon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIconResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIconResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIconBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIconBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIconBookResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsername">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsernameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsernameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorldSoapIn">
@@ -129,11 +326,59 @@
   <wsdl:message name="CheckPasswordSoapOut">
     <wsdl:part name="parameters" element="tns:CheckPasswordResponse" />
   </wsdl:message>
+  <wsdl:message name="IsAdminSoapIn">
+    <wsdl:part name="parameters" element="tns:IsAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IsAdminSoapOut">
+    <wsdl:part name="parameters" element="tns:IsAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPointsSoapIn">
+    <wsdl:part name="parameters" element="tns:AddPoints" />
+  </wsdl:message>
+  <wsdl:message name="AddPointsSoapOut">
+    <wsdl:part name="parameters" element="tns:AddPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailResponse" />
+  </wsdl:message>
   <wsdl:message name="CreateUserSoapIn">
     <wsdl:part name="parameters" element="tns:CreateUser" />
   </wsdl:message>
   <wsdl:message name="CreateUserSoapOut">
     <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetId" />
+  </wsdl:message>
+  <wsdl:message name="GetIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPointsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPoints" />
+  </wsdl:message>
+  <wsdl:message name="GetPointsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBookSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteBook" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBookSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteBookResponse" />
   </wsdl:message>
   <wsdl:message name="GetAllBooksSoapIn">
     <wsdl:part name="parameters" element="tns:GetAllBooks" />
@@ -159,6 +404,36 @@
   <wsdl:message name="GetEmailSoapOut">
     <wsdl:part name="parameters" element="tns:GetEmailResponse" />
   </wsdl:message>
+  <wsdl:message name="GetBooksByTitleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBooksByTitle" />
+  </wsdl:message>
+  <wsdl:message name="GetBooksByTitleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBooksByTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBooksByAuthorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBooksByAuthor" />
+  </wsdl:message>
+  <wsdl:message name="GetBooksByAuthorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBooksByAuthorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIconSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIcon" />
+  </wsdl:message>
+  <wsdl:message name="GetIconSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIconResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIconBookSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIconBook" />
+  </wsdl:message>
+  <wsdl:message name="GetIconBookSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIconBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsernameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsername" />
+  </wsdl:message>
+  <wsdl:message name="GetUsernameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsernameResponse" />
+  </wsdl:message>
   <wsdl:portType name="FreebrisWebServiceSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
@@ -172,9 +447,41 @@
       <wsdl:input message="tns:CheckPasswordSoapIn" />
       <wsdl:output message="tns:CheckPasswordSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="IsAdmin">
+      <wsdl:input message="tns:IsAdminSoapIn" />
+      <wsdl:output message="tns:IsAdminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordSoapIn" />
+      <wsdl:output message="tns:ChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPoints">
+      <wsdl:input message="tns:AddPointsSoapIn" />
+      <wsdl:output message="tns:AddPointsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailSoapIn" />
+      <wsdl:output message="tns:SendEmailSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="CreateUser">
       <wsdl:input message="tns:CreateUserSoapIn" />
       <wsdl:output message="tns:CreateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetId">
+      <wsdl:input message="tns:GetIdSoapIn" />
+      <wsdl:output message="tns:GetIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPoints">
+      <wsdl:input message="tns:GetPointsSoapIn" />
+      <wsdl:output message="tns:GetPointsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input message="tns:DeleteUserSoapIn" />
+      <wsdl:output message="tns:DeleteUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBook">
+      <wsdl:input message="tns:DeleteBookSoapIn" />
+      <wsdl:output message="tns:DeleteBookSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="GetAllBooks">
       <wsdl:input message="tns:GetAllBooksSoapIn" />
@@ -191,6 +498,26 @@
     <wsdl:operation name="GetEmail">
       <wsdl:input message="tns:GetEmailSoapIn" />
       <wsdl:output message="tns:GetEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBooksByTitle">
+      <wsdl:input message="tns:GetBooksByTitleSoapIn" />
+      <wsdl:output message="tns:GetBooksByTitleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBooksByAuthor">
+      <wsdl:input message="tns:GetBooksByAuthorSoapIn" />
+      <wsdl:output message="tns:GetBooksByAuthorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIcon">
+      <wsdl:input message="tns:GetIconSoapIn" />
+      <wsdl:output message="tns:GetIconSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIconBook">
+      <wsdl:input message="tns:GetIconBookSoapIn" />
+      <wsdl:output message="tns:GetIconBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsername">
+      <wsdl:input message="tns:GetUsernameSoapIn" />
+      <wsdl:output message="tns:GetUsernameSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="FreebrisWebServiceSoap" type="tns:FreebrisWebServiceSoap">
@@ -222,8 +549,80 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="IsAdmin">
+      <soap:operation soapAction="FreebrisServer/IsAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="FreebrisServer/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPoints">
+      <soap:operation soapAction="FreebrisServer/AddPoints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <soap:operation soapAction="FreebrisServer/SendEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="CreateUser">
       <soap:operation soapAction="FreebrisServer/CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetId">
+      <soap:operation soapAction="FreebrisServer/GetId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPoints">
+      <soap:operation soapAction="FreebrisServer/GetPoints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="FreebrisServer/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBook">
+      <soap:operation soapAction="FreebrisServer/DeleteBook" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -267,6 +666,51 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetBooksByTitle">
+      <soap:operation soapAction="FreebrisServer/GetBooksByTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBooksByAuthor">
+      <soap:operation soapAction="FreebrisServer/GetBooksByAuthor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIcon">
+      <soap:operation soapAction="FreebrisServer/GetIcon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIconBook">
+      <soap:operation soapAction="FreebrisServer/GetIconBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsername">
+      <soap:operation soapAction="FreebrisServer/GetUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="FreebrisWebServiceSoap12" type="tns:FreebrisWebServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -297,8 +741,80 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="IsAdmin">
+      <soap12:operation soapAction="FreebrisServer/IsAdmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="FreebrisServer/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPoints">
+      <soap12:operation soapAction="FreebrisServer/AddPoints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <soap12:operation soapAction="FreebrisServer/SendEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="CreateUser">
       <soap12:operation soapAction="FreebrisServer/CreateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetId">
+      <soap12:operation soapAction="FreebrisServer/GetId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPoints">
+      <soap12:operation soapAction="FreebrisServer/GetPoints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap12:operation soapAction="FreebrisServer/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBook">
+      <soap12:operation soapAction="FreebrisServer/DeleteBook" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -335,6 +851,51 @@
     </wsdl:operation>
     <wsdl:operation name="GetEmail">
       <soap12:operation soapAction="FreebrisServer/GetEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBooksByTitle">
+      <soap12:operation soapAction="FreebrisServer/GetBooksByTitle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBooksByAuthor">
+      <soap12:operation soapAction="FreebrisServer/GetBooksByAuthor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIcon">
+      <soap12:operation soapAction="FreebrisServer/GetIcon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIconBook">
+      <soap12:operation soapAction="FreebrisServer/GetIconBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsername">
+      <soap12:operation soapAction="FreebrisServer/GetUsername" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

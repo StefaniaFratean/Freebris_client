@@ -22,10 +22,10 @@ namespace Freebris_client
         {
             if (service.CheckPassword(usernameLogTextBox.Text, PassLogTextBox.Text))
             {
-                //HomePage homePage = new HomePage(textBox1.Text);
-                //this.Hide();
-                //homePage.Show();
-                MessageBox.Show("OK");
+                MainAppForm homePage = new MainAppForm(usernameLogTextBox.Text);
+                this.Hide();
+                homePage.Show();
+                //MessageBox.Show("OK");
             }
             else
             {
@@ -35,9 +35,9 @@ namespace Freebris_client
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-            if(PassRegTextBox.Text == Pass2RegTextBox.Text)
+            if (PassRegTextBox.Text == Pass2RegTextBox.Text && emailRegTextBox.Text == email2RegTextBox.Text)
             {
-                if (!service.CreateUser(UserRegTextBox.Text, PassRegTextBox.Text,emailRegTextBox.Text))
+                if (!service.CreateUser(UserRegTextBox.Text, PassRegTextBox.Text, emailRegTextBox.Text))
                 {
                     MessageBox.Show("Username already exits");
                 }
@@ -48,7 +48,14 @@ namespace Freebris_client
             }
             else
             {
-                MessageBox.Show("Passwords do not match!");
+                if (PassRegTextBox.Text == Pass2RegTextBox.Text)
+                {
+                    MessageBox.Show("Passwords do not match!");
+                }
+                else
+                {
+                    MessageBox.Show("Emails do not match!");
+                }
             }
         }
     }

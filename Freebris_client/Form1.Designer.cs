@@ -36,7 +36,7 @@ namespace Freebris_client
             this.emailRegTextBox = new System.Windows.Forms.TextBox();
             this.PassRegTextBox = new System.Windows.Forms.TextBox();
             this.Pass2RegTextBox = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.email2RegTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -72,7 +72,7 @@ namespace Freebris_client
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(688, 0);
+            this.label2.Location = new System.Drawing.Point(682, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 17);
             this.label2.TabIndex = 3;
@@ -83,9 +83,9 @@ namespace Freebris_client
             this.RegisterButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RegisterButton.Location = new System.Drawing.Point(110, 25);
+            this.RegisterButton.Location = new System.Drawing.Point(109, 25);
             this.RegisterButton.Name = "RegisterButton";
-            this.RegisterButton.Size = new System.Drawing.Size(136, 24);
+            this.RegisterButton.Size = new System.Drawing.Size(135, 24);
             this.RegisterButton.TabIndex = 0;
             this.RegisterButton.Text = "Register";
             this.RegisterButton.UseVisualStyleBackColor = true;
@@ -100,17 +100,17 @@ namespace Freebris_client
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.83408F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.16592F));
             this.tableLayoutPanel8.Controls.Add(this.UserRegTextBox, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.email2RegTextBox, 1, 2);
+            this.tableLayoutPanel8.Controls.Add(this.label7, 0, 2);
             this.tableLayoutPanel8.Controls.Add(this.emailRegTextBox, 1, 1);
-            this.tableLayoutPanel8.Controls.Add(this.PassRegTextBox, 1, 2);
-            this.tableLayoutPanel8.Controls.Add(this.Pass2RegTextBox, 1, 3);
-            this.tableLayoutPanel8.Controls.Add(this.textBox7, 1, 4);
             this.tableLayoutPanel8.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.label5, 0, 2);
-            this.tableLayoutPanel8.Controls.Add(this.label6, 0, 3);
-            this.tableLayoutPanel8.Controls.Add(this.label7, 0, 4);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 1, 5);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(688, 82);
+            this.tableLayoutPanel8.Controls.Add(this.label6, 0, 4);
+            this.tableLayoutPanel8.Controls.Add(this.Pass2RegTextBox, 1, 4);
+            this.tableLayoutPanel8.Controls.Add(this.label5, 0, 3);
+            this.tableLayoutPanel8.Controls.Add(this.PassRegTextBox, 1, 3);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(682, 82);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 6;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.6F));
@@ -119,7 +119,7 @@ namespace Freebris_client
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.6F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.6F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(446, 467);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(443, 467);
             this.tableLayoutPanel8.TabIndex = 1;
             // 
             // UserRegTextBox
@@ -128,7 +128,7 @@ namespace Freebris_client
             | System.Windows.Forms.AnchorStyles.Right)));
             this.UserRegTextBox.Location = new System.Drawing.Point(86, 3);
             this.UserRegTextBox.Name = "UserRegTextBox";
-            this.UserRegTextBox.Size = new System.Drawing.Size(357, 22);
+            this.UserRegTextBox.Size = new System.Drawing.Size(354, 22);
             this.UserRegTextBox.TabIndex = 0;
             // 
             // emailRegTextBox
@@ -137,37 +137,37 @@ namespace Freebris_client
             | System.Windows.Forms.AnchorStyles.Right)));
             this.emailRegTextBox.Location = new System.Drawing.Point(86, 80);
             this.emailRegTextBox.Name = "emailRegTextBox";
-            this.emailRegTextBox.Size = new System.Drawing.Size(357, 22);
+            this.emailRegTextBox.Size = new System.Drawing.Size(354, 22);
             this.emailRegTextBox.TabIndex = 1;
             // 
             // PassRegTextBox
             // 
             this.PassRegTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PassRegTextBox.Location = new System.Drawing.Point(86, 157);
+            this.PassRegTextBox.Location = new System.Drawing.Point(86, 234);
             this.PassRegTextBox.Name = "PassRegTextBox";
             this.PassRegTextBox.PasswordChar = '*';
-            this.PassRegTextBox.Size = new System.Drawing.Size(357, 22);
+            this.PassRegTextBox.Size = new System.Drawing.Size(354, 22);
             this.PassRegTextBox.TabIndex = 2;
             // 
             // Pass2RegTextBox
             // 
             this.Pass2RegTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pass2RegTextBox.Location = new System.Drawing.Point(86, 234);
+            this.Pass2RegTextBox.Location = new System.Drawing.Point(86, 311);
             this.Pass2RegTextBox.Name = "Pass2RegTextBox";
             this.Pass2RegTextBox.PasswordChar = '*';
-            this.Pass2RegTextBox.Size = new System.Drawing.Size(357, 22);
+            this.Pass2RegTextBox.Size = new System.Drawing.Size(354, 22);
             this.Pass2RegTextBox.TabIndex = 3;
             // 
-            // textBox7
+            // email2RegTextBox
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.email2RegTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(86, 311);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(357, 22);
-            this.textBox7.TabIndex = 4;
+            this.email2RegTextBox.Location = new System.Drawing.Point(86, 157);
+            this.email2RegTextBox.Name = "email2RegTextBox";
+            this.email2RegTextBox.Size = new System.Drawing.Size(354, 22);
+            this.email2RegTextBox.TabIndex = 4;
             // 
             // label3
             // 
@@ -190,7 +190,7 @@ namespace Freebris_client
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 154);
+            this.label5.Location = new System.Drawing.Point(3, 231);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 7;
@@ -199,7 +199,7 @@ namespace Freebris_client
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 231);
+            this.label6.Location = new System.Drawing.Point(3, 308);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 34);
             this.label6.TabIndex = 8;
@@ -208,7 +208,7 @@ namespace Freebris_client
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 308);
+            this.label7.Location = new System.Drawing.Point(3, 154);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 17);
             this.label7.TabIndex = 9;
@@ -230,7 +230,7 @@ namespace Freebris_client
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(357, 76);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(354, 76);
             this.tableLayoutPanel9.TabIndex = 10;
             // 
             // label1
@@ -247,9 +247,9 @@ namespace Freebris_client
             this.LoginButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoginButton.Location = new System.Drawing.Point(137, 25);
+            this.LoginButton.Location = new System.Drawing.Point(136, 25);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(173, 24);
+            this.LoginButton.Size = new System.Drawing.Size(171, 24);
             this.LoginButton.TabIndex = 0;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
@@ -271,14 +271,14 @@ namespace Freebris_client
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(448, 75);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(444, 75);
             this.tableLayoutPanel7.TabIndex = 2;
             // 
             // PassLogTextBox
             // 
-            this.PassLogTextBox.Location = new System.Drawing.Point(92, 3);
+            this.PassLogTextBox.Location = new System.Drawing.Point(91, 3);
             this.PassLogTextBox.Name = "PassLogTextBox";
-            this.PassLogTextBox.Size = new System.Drawing.Size(353, 22);
+            this.PassLogTextBox.Size = new System.Drawing.Size(350, 22);
             this.PassLogTextBox.TabIndex = 0;
             // 
             // label9
@@ -307,7 +307,7 @@ namespace Freebris_client
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1906, 930);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1891, 930);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -323,12 +323,12 @@ namespace Freebris_client
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel8, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label2, 2, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(384, 189);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(381, 189);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.49016F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.50984F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1137, 552);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1128, 552);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -348,7 +348,7 @@ namespace Freebris_client
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.6F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.6F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(454, 467);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(450, 467);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // tableLayoutPanel5
@@ -365,14 +365,14 @@ namespace Freebris_client
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(448, 71);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(444, 71);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // usernameLogTextBox
             // 
-            this.usernameLogTextBox.Location = new System.Drawing.Point(92, 3);
+            this.usernameLogTextBox.Location = new System.Drawing.Point(91, 3);
             this.usernameLogTextBox.Name = "usernameLogTextBox";
-            this.usernameLogTextBox.Size = new System.Drawing.Size(353, 22);
+            this.usernameLogTextBox.Size = new System.Drawing.Size(350, 22);
             this.usernameLogTextBox.TabIndex = 0;
             // 
             // label8
@@ -398,7 +398,7 @@ namespace Freebris_client
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(448, 71);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(444, 71);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -416,7 +416,7 @@ namespace Freebris_client
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1912, 1040);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1897, 1040);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -464,7 +464,7 @@ namespace Freebris_client
         private System.Windows.Forms.TextBox emailRegTextBox;
         private System.Windows.Forms.TextBox PassRegTextBox;
         private System.Windows.Forms.TextBox Pass2RegTextBox;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox email2RegTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

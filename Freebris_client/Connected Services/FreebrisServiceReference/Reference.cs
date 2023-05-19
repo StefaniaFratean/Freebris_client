@@ -37,12 +37,68 @@ namespace Freebris_client.FreebrisServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/CheckPassword", ReplyAction="*")]
         System.Threading.Tasks.Task<bool> CheckPasswordAsync(string username, string password);
         
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/IsAdmin", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool IsAdmin(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/IsAdmin", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> IsAdminAsync(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/ChangePassword", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool ChangePassword(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/ChangePassword", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> ChangePasswordAsync(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/AddPoints", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int AddPoints(string id, int points);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/AddPoints", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> AddPointsAsync(string id, int points);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/SendEmail", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        void SendEmail(string email, string subject, string text);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/SendEmail", ReplyAction="*")]
+        System.Threading.Tasks.Task SendEmailAsync(string email, string subject, string text);
+        
         [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/CreateUser", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         bool CreateUser(string username, string password, string email);
         
         [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/CreateUser", ReplyAction="*")]
         System.Threading.Tasks.Task<bool> CreateUserAsync(string username, string password, string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetId", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int GetId(string username, string table);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetId", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> GetIdAsync(string username, string table);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetPoints", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int GetPoints(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetPoints", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> GetPointsAsync(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/DeleteUser", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool DeleteUser(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/DeleteUser", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> DeleteUserAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/DeleteBook", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool DeleteBook(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/DeleteBook", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> DeleteBookAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetAllBooks", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -53,10 +109,10 @@ namespace Freebris_client.FreebrisServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/CreateBook", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        void CreateBook(string name, int dimension, string description, string username);
+        void CreateBook(string name, int size, int idAuthor, int idIconBook);
         
         [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/CreateBook", ReplyAction="*")]
-        System.Threading.Tasks.Task CreateBookAsync(string name, int dimension, string description, string username);
+        System.Threading.Tasks.Task CreateBookAsync(string name, int size, int idAuthor, int idIconBook);
         
         [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/ChangeEmail", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -71,6 +127,41 @@ namespace Freebris_client.FreebrisServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetEmail", ReplyAction="*")]
         System.Threading.Tasks.Task<string> GetEmailAsync(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetBooksByTitle", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataTable GetBooksByTitle(string bookName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetBooksByTitle", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataTable> GetBooksByTitleAsync(string bookName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetBooksByAuthor", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataTable GetBooksByAuthor(string authorName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetBooksByAuthor", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataTable> GetBooksByAuthorAsync(string authorName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetIcon", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string GetIcon(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetIcon", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> GetIconAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetIconBook", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string GetIconBook(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetIconBook", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> GetIconBookAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetUsername", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string GetUsername(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetUsername", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> GetUsernameAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -124,12 +215,76 @@ namespace Freebris_client.FreebrisServiceReference {
             return base.Channel.CheckPasswordAsync(username, password);
         }
         
+        public bool IsAdmin(string username) {
+            return base.Channel.IsAdmin(username);
+        }
+        
+        public System.Threading.Tasks.Task<bool> IsAdminAsync(string username) {
+            return base.Channel.IsAdminAsync(username);
+        }
+        
+        public bool ChangePassword(string username, string password) {
+            return base.Channel.ChangePassword(username, password);
+        }
+        
+        public System.Threading.Tasks.Task<bool> ChangePasswordAsync(string username, string password) {
+            return base.Channel.ChangePasswordAsync(username, password);
+        }
+        
+        public int AddPoints(string id, int points) {
+            return base.Channel.AddPoints(id, points);
+        }
+        
+        public System.Threading.Tasks.Task<int> AddPointsAsync(string id, int points) {
+            return base.Channel.AddPointsAsync(id, points);
+        }
+        
+        public void SendEmail(string email, string subject, string text) {
+            base.Channel.SendEmail(email, subject, text);
+        }
+        
+        public System.Threading.Tasks.Task SendEmailAsync(string email, string subject, string text) {
+            return base.Channel.SendEmailAsync(email, subject, text);
+        }
+        
         public bool CreateUser(string username, string password, string email) {
             return base.Channel.CreateUser(username, password, email);
         }
         
         public System.Threading.Tasks.Task<bool> CreateUserAsync(string username, string password, string email) {
             return base.Channel.CreateUserAsync(username, password, email);
+        }
+        
+        public int GetId(string username, string table) {
+            return base.Channel.GetId(username, table);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetIdAsync(string username, string table) {
+            return base.Channel.GetIdAsync(username, table);
+        }
+        
+        public int GetPoints(string username) {
+            return base.Channel.GetPoints(username);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetPointsAsync(string username) {
+            return base.Channel.GetPointsAsync(username);
+        }
+        
+        public bool DeleteUser(int id) {
+            return base.Channel.DeleteUser(id);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeleteUserAsync(int id) {
+            return base.Channel.DeleteUserAsync(id);
+        }
+        
+        public bool DeleteBook(int id) {
+            return base.Channel.DeleteBook(id);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeleteBookAsync(int id) {
+            return base.Channel.DeleteBookAsync(id);
         }
         
         public System.Data.DataTable GetAllBooks() {
@@ -140,12 +295,12 @@ namespace Freebris_client.FreebrisServiceReference {
             return base.Channel.GetAllBooksAsync();
         }
         
-        public void CreateBook(string name, int dimension, string description, string username) {
-            base.Channel.CreateBook(name, dimension, description, username);
+        public void CreateBook(string name, int size, int idAuthor, int idIconBook) {
+            base.Channel.CreateBook(name, size, idAuthor, idIconBook);
         }
         
-        public System.Threading.Tasks.Task CreateBookAsync(string name, int dimension, string description, string username) {
-            return base.Channel.CreateBookAsync(name, dimension, description, username);
+        public System.Threading.Tasks.Task CreateBookAsync(string name, int size, int idAuthor, int idIconBook) {
+            return base.Channel.CreateBookAsync(name, size, idAuthor, idIconBook);
         }
         
         public void ChangeEmail(string username, string newEmail) {
@@ -162,6 +317,46 @@ namespace Freebris_client.FreebrisServiceReference {
         
         public System.Threading.Tasks.Task<string> GetEmailAsync(string username) {
             return base.Channel.GetEmailAsync(username);
+        }
+        
+        public System.Data.DataTable GetBooksByTitle(string bookName) {
+            return base.Channel.GetBooksByTitle(bookName);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> GetBooksByTitleAsync(string bookName) {
+            return base.Channel.GetBooksByTitleAsync(bookName);
+        }
+        
+        public System.Data.DataTable GetBooksByAuthor(string authorName) {
+            return base.Channel.GetBooksByAuthor(authorName);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> GetBooksByAuthorAsync(string authorName) {
+            return base.Channel.GetBooksByAuthorAsync(authorName);
+        }
+        
+        public string GetIcon(int id) {
+            return base.Channel.GetIcon(id);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetIconAsync(int id) {
+            return base.Channel.GetIconAsync(id);
+        }
+        
+        public string GetIconBook(int id) {
+            return base.Channel.GetIconBook(id);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetIconBookAsync(int id) {
+            return base.Channel.GetIconBookAsync(id);
+        }
+        
+        public string GetUsername(int id) {
+            return base.Channel.GetUsername(id);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetUsernameAsync(int id) {
+            return base.Channel.GetUsernameAsync(id);
         }
     }
 }
