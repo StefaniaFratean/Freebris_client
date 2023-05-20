@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,13 +14,15 @@ namespace Freebris_client.Pages
     public partial class MainPage : UserControl
     {
         string username;
+        string typeAcc;
         FreebrisServiceReference.FreebrisWebServiceSoapClient service = new FreebrisServiceReference.FreebrisWebServiceSoapClient();
-        public MainPage(string username)
+        public MainPage(string username, string typeAcc)
         {
             this.username = username;
+            this.typeAcc = typeAcc;
             InitializeComponent();
             DataTable books = service.GetAllBooks();
-            PrintAllBooks(books);
+            PrintBooks(books);
             points.Text = service.GetPoints(username).ToString();
         }
 
@@ -29,25 +32,25 @@ namespace Freebris_client.Pages
             if(radioButton1.Checked)
             {
                 DataTable books = service.GetBooksByAuthor(textBox1.Text);
-                PrintAllBooks(books);
+                PrintBooks(books);
             }
             //by title
             else if (radioButton2.Checked)
             {
                 DataTable books = service.GetBooksByTitle(textBox1.Text);
-                PrintAllBooks(books);
+                PrintBooks(books);
             }
             // all
             else
             {
                 DataTable books = service.GetAllBooks();
-                PrintAllBooks(books);
+                PrintBooks(books);
             }
         }
 
 
 
-        private void PrintAllBooks(DataTable books)
+        private void PrintBooks(DataTable books)
         {
             panel1.Controls.Clear();
             panel1.AutoScroll = true;
@@ -99,7 +102,7 @@ namespace Freebris_client.Pages
                 Button download = new Button();
                 download.Name = books.Rows[i]["name"].ToString();
                 download.Size = new Size(80, 40);
-                download.Text = "Download";
+                download.Text = "Get this book";
                 download.Visible = true;
                 download.Location = new Point(0, y+20);
                 download.Click += new EventHandler(Download_Click);
@@ -128,24 +131,41 @@ namespace Freebris_client.Pages
 
         private void Download_Click(object sender, EventArgs e)
         {
+            int idUser = service.GetId(username);
+            Button btn = (Button)sender;
+            int idBook = service.GetBookId(btn.Name);
 
-            if(service.GetPoints(username) < 20)
+            if (service.GetPoints(username) < 20)
             {
                 MessageBox.Show("You don't have enough points to download this book! ");
                 return;
             }
             string email = service.GetEmail(username);
-            service.SendEmail(email, "Your new book", @"D:\FreebrisPDF\practicalrecordingtechniques.pdf");
+            service.CreateDownload(idUser, idBook);
+            string location = service.GetPath(idBook);
+            service.SendEmail(email, "Your new book", location);
+            service.AddPoints(idUser, -20);
+            points.Text = service.GetPoints(username).ToString();
+
+            MessageBox.Show("The book was sended on email!");
         }
 
         private void Book_Click(object sender, EventArgs e)
         {
+            Button btn = (Button)sender;
+            int userId = service.GetId(username);
+            ReviewsPage reviewsPage = new ReviewsPage(btn.Name, userId, typeAcc);
+            reviewsPage.ShowDialog();
+        }
 
-            MessageBox.Show("It is working :)");
+        private void MainPage_Load(object sender, EventArgs e)
+        {
 
         }
 
-        
-
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

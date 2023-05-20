@@ -40,6 +40,7 @@ namespace Freebris_client.Pages
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.points = new System.Windows.Forms.Label();
+            this.LogoutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -137,7 +138,7 @@ namespace Freebris_client.Pages
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1190, 35);
+            this.label4.Location = new System.Drawing.Point(1073, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 20);
             this.label4.TabIndex = 10;
@@ -147,16 +148,27 @@ namespace Freebris_client.Pages
             // 
             this.points.AutoSize = true;
             this.points.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.points.Location = new System.Drawing.Point(1301, 35);
+            this.points.Location = new System.Drawing.Point(1184, 66);
             this.points.Name = "points";
             this.points.Size = new System.Drawing.Size(53, 20);
             this.points.TabIndex = 11;
             this.points.Text = "label5";
             // 
+            // LogoutButton
+            // 
+            this.LogoutButton.Location = new System.Drawing.Point(1162, 21);
+            this.LogoutButton.Name = "LogoutButton";
+            this.LogoutButton.Size = new System.Drawing.Size(75, 32);
+            this.LogoutButton.TabIndex = 12;
+            this.LogoutButton.Text = "Logout";
+            this.LogoutButton.UseVisualStyleBackColor = true;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.LogoutButton);
             this.Controls.Add(this.points);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.radioButton3);
@@ -170,6 +182,7 @@ namespace Freebris_client.Pages
             this.Controls.Add(this.label1);
             this.Name = "MainPage";
             this.Size = new System.Drawing.Size(1423, 1037);
+            this.Load += new System.EventHandler(this.MainPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +201,6 @@ namespace Freebris_client.Pages
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label points;
+        private System.Windows.Forms.Button LogoutButton;
     }
 }

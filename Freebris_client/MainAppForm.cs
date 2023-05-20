@@ -15,19 +15,30 @@ namespace Freebris_client
     {
         NavigationController navigationController;
         string username;
-        public MainAppForm(string username)
+        string typeAcc;
+        public MainAppForm(string username, string typeAcc)
         {
             this.username = username;
+            this.typeAcc = typeAcc;
             InitializeComponent();
             InitializeNavigationController();
+            if(typeAcc != "admin")
+            {
+                AdminButton.Visible = false;
+            }
         }
 
         private void InitializeNavigationController()
         {
             List<UserControl> pages = new List<UserControl>()
             {
-                new MainPage(username),
-                new SettingsPage(username)
+                new MainPage(username, typeAcc),
+                new SettingsPage(username, typeAcc),
+                new YourBooksPage(username, typeAcc),
+                new YourDownloadsPage(username, typeAcc),
+                new AddBookPage(username, typeAcc),
+                new AdminPage(username)
+
                 // more pages to add
             };
 
@@ -43,6 +54,26 @@ namespace Freebris_client
         private void button2_Click(object sender, EventArgs e)
         {
             navigationController.Display(1);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            navigationController.Display(2);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            navigationController.Display(3);
+        }
+
+        private void AddBookButton_Click(object sender, EventArgs e)
+        {
+            navigationController.Display(4);
+        }
+
+        private void AdminButton_Click(object sender, EventArgs e)
+        {
+            navigationController.Display(5);
         }
     }
 }

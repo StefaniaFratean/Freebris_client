@@ -66,11 +66,29 @@
       <DependentUpon>MainAppForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NavigationController.cs" />
+    <Compile Include="Pages\AddBookPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\AddBookPage.Designer.cs">
+      <DependentUpon>AddBookPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\AdminPage.Designer.cs">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MainPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Pages\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReviewsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ReviewsPage.Designer.cs">
+      <DependentUpon>ReviewsPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\SettingsPage.cs">
       <SubType>UserControl</SubType>
@@ -84,6 +102,12 @@
     <Compile Include="Pages\YourBooksPage.Designer.cs">
       <DependentUpon>YourBooksPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\YourDownloadsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\YourDownloadsPage.Designer.cs">
+      <DependentUpon>YourDownloadsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -92,14 +116,26 @@
     <EmbeddedResource Include="MainAppForm.resx">
       <DependentUpon>MainAppForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AddBookPage.resx">
+      <DependentUpon>AddBookPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AdminPage.resx">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pages\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ReviewsPage.resx">
+      <DependentUpon>ReviewsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\SettingsPage.resx">
       <DependentUpon>SettingsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\YourBooksPage.resx">
       <DependentUpon>YourBooksPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\YourDownloadsPage.resx">
+      <DependentUpon>YourDownloadsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

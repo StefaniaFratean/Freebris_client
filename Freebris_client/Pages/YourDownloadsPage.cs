@@ -10,30 +10,28 @@ using System.Windows.Forms;
 
 namespace Freebris_client.Pages
 {
-    public partial class YourBooksPage : UserControl
+    public partial class YourDownloadsPage : UserControl
     {
 
         string username;
         string typeAcc;
         FreebrisServiceReference.FreebrisWebServiceSoapClient service = new FreebrisServiceReference.FreebrisWebServiceSoapClient();
-        public YourBooksPage(string username, string typeAcc)
+        public YourDownloadsPage(string username, string typeAcc)
         {
             this.username = username;
             this.typeAcc = typeAcc;
             InitializeComponent();
+            points.Text = service.GetPoints(username).ToString();
         }
 
-        private void YourBooksPage_Load(object sender, EventArgs e)
+        private void YourDownloadsPage_Load(object sender, EventArgs e)
         {
-            points.Text = service.GetPoints(username).ToString();
-            DataTable books = service.GetBooksByAuthor(username);
-            PrintAllBooks(books);
-            points.Text = service.GetPoints(username).ToString();
+            int id = service.GetId(username);
+            DataTable books = service.GetDownloadedBooksByUser(id);
+            PrintBooks(books);
         }
 
-
-
-        private void PrintAllBooks(DataTable books)
+        private void PrintBooks(DataTable books)
         {
             panel1.Controls.Clear();
             panel1.AutoScroll = true;
@@ -78,13 +76,13 @@ namespace Freebris_client.Pages
                 tb2.Location = new Point(620, y);
                 tb2.Visible = true;
 
-                Button delete = new Button();
-                delete.Name = books.Rows[i]["name"].ToString();
-                delete.Size = new Size(80, 40);
-                delete.Text = "Delete";
-                delete.Visible = true;
-                delete.Location = new Point(0, y + 20);
-                delete.Click += new EventHandler(Delete_Click);
+                Button download = new Button();
+                download.Name = books.Rows[i]["name"].ToString();
+                download.Size = new Size(80, 40);
+                download.Text = "Get this book";
+                download.Visible = true;
+                download.Location = new Point(0, y + 20);
+                download.Click += new EventHandler(Download_Click);
 
                 Label path = new Label();
                 path.Name = books.Rows[i]["name"].ToString() + "label";
@@ -95,28 +93,25 @@ namespace Freebris_client.Pages
                 panel1.Controls.Add(book);
                 panel1.Controls.Add(tb);
                 panel1.Controls.Add(tb2);
-                panel1.Controls.Add(delete);
+                panel1.Controls.Add(download);
                 panel1.Controls.Add(path);
 
                 y += 250;
             }
         }
-        private void Delete_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete your book?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (dialogResult == DialogResult.Yes)
-            {
-                Button btn = (Button)sender;    
-                int id = service.GetBookId(btn.Name);
-                service.DeleteBook(id);
-                MessageBox.Show("Your book had been deleted");
 
-                DataTable books = service.GetBooksByAuthor(username);
-                PrintAllBooks(books);
-            }
+        private void Download_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            int idBook = service.GetBookId(btn.Name);
+
+            string email = service.GetEmail(username);
+            string location = service.GetPath(idBook);
+            service.SendEmail(email, "Your new book", location);
+
+            MessageBox.Show("The book was sended on email!");
         }
 
-        // reviews: 
         private void Book_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;

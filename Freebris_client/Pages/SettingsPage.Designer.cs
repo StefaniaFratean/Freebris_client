@@ -47,6 +47,11 @@ namespace Freebris_client.Pages
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.IconButton = new System.Windows.Forms.Button();
+            this.IconPanel = new System.Windows.Forms.Panel();
+            this.LogoutButton = new System.Windows.Forms.Button();
+            this.points = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanelChangePass.SuspendLayout();
             this.tableLayoutPanelChangeEmail.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +80,7 @@ namespace Freebris_client.Pages
             // 
             // DeleteAccountButton
             // 
-            this.DeleteAccountButton.Location = new System.Drawing.Point(225, 428);
+            this.DeleteAccountButton.Location = new System.Drawing.Point(225, 566);
             this.DeleteAccountButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeleteAccountButton.Name = "DeleteAccountButton";
             this.DeleteAccountButton.Size = new System.Drawing.Size(193, 75);
@@ -158,7 +163,7 @@ namespace Freebris_client.Pages
             // 
             // ConfirmButton
             // 
-            this.ConfirmButton.Location = new System.Drawing.Point(766, 553);
+            this.ConfirmButton.Location = new System.Drawing.Point(785, 566);
             this.ConfirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ConfirmButton.Name = "ConfirmButton";
             this.ConfirmButton.Size = new System.Drawing.Size(109, 39);
@@ -178,7 +183,7 @@ namespace Freebris_client.Pages
             this.tableLayoutPanelChangeEmail.Controls.Add(this.label7, 0, 2);
             this.tableLayoutPanelChangeEmail.Controls.Add(this.textBox4, 1, 1);
             this.tableLayoutPanelChangeEmail.Controls.Add(this.textBox5, 1, 2);
-            this.tableLayoutPanelChangeEmail.Location = new System.Drawing.Point(76, 573);
+            this.tableLayoutPanelChangeEmail.Location = new System.Drawing.Point(601, 148);
             this.tableLayoutPanelChangeEmail.Name = "tableLayoutPanelChangeEmail";
             this.tableLayoutPanelChangeEmail.RowCount = 3;
             this.tableLayoutPanelChangeEmail.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
@@ -237,10 +242,63 @@ namespace Freebris_client.Pages
             this.textBox5.Size = new System.Drawing.Size(305, 22);
             this.textBox5.TabIndex = 5;
             // 
+            // IconButton
+            // 
+            this.IconButton.Location = new System.Drawing.Point(225, 424);
+            this.IconButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.IconButton.Name = "IconButton";
+            this.IconButton.Size = new System.Drawing.Size(193, 75);
+            this.IconButton.TabIndex = 6;
+            this.IconButton.Text = "Change icon";
+            this.IconButton.UseVisualStyleBackColor = true;
+            this.IconButton.Click += new System.EventHandler(this.IconButton_Click);
+            // 
+            // IconPanel
+            // 
+            this.IconPanel.Location = new System.Drawing.Point(601, 148);
+            this.IconPanel.Name = "IconPanel";
+            this.IconPanel.Size = new System.Drawing.Size(661, 796);
+            this.IconPanel.TabIndex = 7;
+            // 
+            // LogoutButton
+            // 
+            this.LogoutButton.Location = new System.Drawing.Point(1187, 27);
+            this.LogoutButton.Name = "LogoutButton";
+            this.LogoutButton.Size = new System.Drawing.Size(75, 32);
+            this.LogoutButton.TabIndex = 15;
+            this.LogoutButton.Text = "Logout";
+            this.LogoutButton.UseVisualStyleBackColor = true;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
+            // 
+            // points
+            // 
+            this.points.AutoSize = true;
+            this.points.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.points.Location = new System.Drawing.Point(1209, 72);
+            this.points.Name = "points";
+            this.points.Size = new System.Drawing.Size(53, 20);
+            this.points.TabIndex = 14;
+            this.points.Text = "label5";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(1098, 72);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(98, 20);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Your points:";
+            // 
             // SettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.LogoutButton);
+            this.Controls.Add(this.points);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.IconPanel);
+            this.Controls.Add(this.IconButton);
             this.Controls.Add(this.tableLayoutPanelChangeEmail);
             this.Controls.Add(this.ConfirmButton);
             this.Controls.Add(this.tableLayoutPanelChangePass);
@@ -255,6 +313,7 @@ namespace Freebris_client.Pages
             this.tableLayoutPanelChangeEmail.ResumeLayout(false);
             this.tableLayoutPanelChangeEmail.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -278,5 +337,10 @@ namespace Freebris_client.Pages
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button IconButton;
+        private System.Windows.Forms.Panel IconPanel;
+        private System.Windows.Forms.Button LogoutButton;
+        private System.Windows.Forms.Label points;
+        private System.Windows.Forms.Label label8;
     }
 }

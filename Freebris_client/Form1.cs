@@ -19,10 +19,20 @@ namespace Freebris_client
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
-        {
+        {                
             if (service.CheckPassword(usernameLogTextBox.Text, PassLogTextBox.Text))
             {
-                MainAppForm homePage = new MainAppForm(usernameLogTextBox.Text);
+                string typeAcc;
+                if(service.IsAdmin(usernameLogTextBox.Text))
+                {
+                    typeAcc = "admin";
+                }
+                else
+                {
+                    typeAcc = "classic";
+                }
+
+                MainAppForm homePage = new MainAppForm(usernameLogTextBox.Text, typeAcc);
                 this.Hide();
                 homePage.Show();
                 //MessageBox.Show("OK");

@@ -33,16 +33,16 @@ namespace Freebris_client
             this.RegisterButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.UserRegTextBox = new System.Windows.Forms.TextBox();
-            this.emailRegTextBox = new System.Windows.Forms.TextBox();
-            this.PassRegTextBox = new System.Windows.Forms.TextBox();
-            this.Pass2RegTextBox = new System.Windows.Forms.TextBox();
             this.email2RegTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.emailRegTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Pass2RegTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.PassRegTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -131,35 +131,6 @@ namespace Freebris_client
             this.UserRegTextBox.Size = new System.Drawing.Size(354, 22);
             this.UserRegTextBox.TabIndex = 0;
             // 
-            // emailRegTextBox
-            // 
-            this.emailRegTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.emailRegTextBox.Location = new System.Drawing.Point(86, 80);
-            this.emailRegTextBox.Name = "emailRegTextBox";
-            this.emailRegTextBox.Size = new System.Drawing.Size(354, 22);
-            this.emailRegTextBox.TabIndex = 1;
-            // 
-            // PassRegTextBox
-            // 
-            this.PassRegTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PassRegTextBox.Location = new System.Drawing.Point(86, 234);
-            this.PassRegTextBox.Name = "PassRegTextBox";
-            this.PassRegTextBox.PasswordChar = '*';
-            this.PassRegTextBox.Size = new System.Drawing.Size(354, 22);
-            this.PassRegTextBox.TabIndex = 2;
-            // 
-            // Pass2RegTextBox
-            // 
-            this.Pass2RegTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pass2RegTextBox.Location = new System.Drawing.Point(86, 311);
-            this.Pass2RegTextBox.Name = "Pass2RegTextBox";
-            this.Pass2RegTextBox.PasswordChar = '*';
-            this.Pass2RegTextBox.Size = new System.Drawing.Size(354, 22);
-            this.Pass2RegTextBox.TabIndex = 3;
-            // 
             // email2RegTextBox
             // 
             this.email2RegTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -168,6 +139,24 @@ namespace Freebris_client
             this.email2RegTextBox.Name = "email2RegTextBox";
             this.email2RegTextBox.Size = new System.Drawing.Size(354, 22);
             this.email2RegTextBox.TabIndex = 4;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 154);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 34);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "repeat email";
+            // 
+            // emailRegTextBox
+            // 
+            this.emailRegTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.emailRegTextBox.Location = new System.Drawing.Point(86, 80);
+            this.emailRegTextBox.Name = "emailRegTextBox";
+            this.emailRegTextBox.Size = new System.Drawing.Size(354, 22);
+            this.emailRegTextBox.TabIndex = 1;
             // 
             // label3
             // 
@@ -187,33 +176,6 @@ namespace Freebris_client
             this.label4.TabIndex = 6;
             this.label4.Text = "email";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 231);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 17);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "password";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 308);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 34);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "repeat password";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 154);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "label7";
-            // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -232,6 +194,44 @@ namespace Freebris_client
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(354, 76);
             this.tableLayoutPanel9.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 308);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 34);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "repeat password";
+            // 
+            // Pass2RegTextBox
+            // 
+            this.Pass2RegTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pass2RegTextBox.Location = new System.Drawing.Point(86, 311);
+            this.Pass2RegTextBox.Name = "Pass2RegTextBox";
+            this.Pass2RegTextBox.PasswordChar = '*';
+            this.Pass2RegTextBox.Size = new System.Drawing.Size(354, 22);
+            this.Pass2RegTextBox.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 231);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 17);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "password";
+            // 
+            // PassRegTextBox
+            // 
+            this.PassRegTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PassRegTextBox.Location = new System.Drawing.Point(86, 234);
+            this.PassRegTextBox.Name = "PassRegTextBox";
+            this.PassRegTextBox.PasswordChar = '*';
+            this.PassRegTextBox.Size = new System.Drawing.Size(354, 22);
+            this.PassRegTextBox.TabIndex = 2;
             // 
             // label1
             // 
@@ -278,6 +278,7 @@ namespace Freebris_client
             // 
             this.PassLogTextBox.Location = new System.Drawing.Point(91, 3);
             this.PassLogTextBox.Name = "PassLogTextBox";
+            this.PassLogTextBox.PasswordChar = '*';
             this.PassLogTextBox.Size = new System.Drawing.Size(350, 22);
             this.PassLogTextBox.TabIndex = 0;
             // 

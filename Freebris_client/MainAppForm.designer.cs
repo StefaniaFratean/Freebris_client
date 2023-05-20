@@ -35,8 +35,9 @@ namespace Freebris_client
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.AddBookButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.AdminButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -64,16 +65,18 @@ namespace Freebris_client
             this.tableLayoutPanel2.Controls.Add(this.button2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.button3, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.button4, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.button5, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.AddBookButton, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.AdminButton, 0, 5);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 5;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowCount = 6;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(470, 1037);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
@@ -82,7 +85,7 @@ namespace Freebris_client
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(464, 201);
+            this.button1.Size = new System.Drawing.Size(464, 166);
             this.button1.TabIndex = 0;
             this.button1.Text = "Home page";
             this.button1.UseVisualStyleBackColor = true;
@@ -91,9 +94,9 @@ namespace Freebris_client
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(3, 210);
+            this.button2.Location = new System.Drawing.Point(3, 175);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(464, 201);
+            this.button2.Size = new System.Drawing.Size(464, 166);
             this.button2.TabIndex = 1;
             this.button2.Text = "Settings";
             this.button2.UseVisualStyleBackColor = true;
@@ -102,22 +105,35 @@ namespace Freebris_client
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(3, 417);
+            this.button3.Location = new System.Drawing.Point(3, 347);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(464, 201);
+            this.button3.Size = new System.Drawing.Size(464, 166);
             this.button3.TabIndex = 2;
             this.button3.Text = "Your books";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(3, 624);
+            this.button4.Location = new System.Drawing.Point(3, 519);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(464, 201);
+            this.button4.Size = new System.Drawing.Size(464, 166);
             this.button4.TabIndex = 3;
             this.button4.Text = "Your downloads";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // AddBookButton
+            // 
+            this.AddBookButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddBookButton.Location = new System.Drawing.Point(3, 691);
+            this.AddBookButton.Name = "AddBookButton";
+            this.AddBookButton.Size = new System.Drawing.Size(464, 166);
+            this.AddBookButton.TabIndex = 4;
+            this.AddBookButton.Text = "Add a book";
+            this.AddBookButton.UseVisualStyleBackColor = true;
+            this.AddBookButton.Click += new System.EventHandler(this.AddBookButton_Click);
             // 
             // panel1
             // 
@@ -127,15 +143,16 @@ namespace Freebris_client
             this.panel1.Size = new System.Drawing.Size(1423, 1037);
             this.panel1.TabIndex = 1;
             // 
-            // button5
+            // AdminButton
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Location = new System.Drawing.Point(3, 831);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(464, 203);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.AdminButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdminButton.Location = new System.Drawing.Point(3, 863);
+            this.AdminButton.Name = "AdminButton";
+            this.AdminButton.Size = new System.Drawing.Size(464, 171);
+            this.AdminButton.TabIndex = 5;
+            this.AdminButton.Text = "Manage Users";
+            this.AdminButton.UseVisualStyleBackColor = true;
+            this.AdminButton.Click += new System.EventHandler(this.AdminButton_Click);
             // 
             // MainAppForm
             // 
@@ -161,6 +178,7 @@ namespace Freebris_client
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button AddBookButton;
+        private System.Windows.Forms.Button AdminButton;
     }
 }
