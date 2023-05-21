@@ -53,7 +53,18 @@ namespace Freebris_client.Pages
                 reviewText.Size = new Size(400, 100);
                 reviewText.BackColor = Color.White;
 
-                if (int.Parse(reviews.Rows[i]["userId"].ToString()) == userId)
+                if (service.IsAdmin(username))
+                {
+                    Button delete = new Button();
+                    delete.Name = reviews.Rows[i]["id"].ToString();
+                    delete.Size = new Size(80, 40);
+                    delete.Text = "Delete";
+                    delete.Visible = true;
+                    delete.Location = new Point(0, y + 100);
+                    delete.Click += new EventHandler(Delete_Click);
+                    panel1.Controls.Add(delete);
+                }
+                else if (int.Parse(reviews.Rows[i]["userId"].ToString()) == userId)
                 {
                     Button delete = new Button();
                     delete.Name = reviews.Rows[i]["id"].ToString();

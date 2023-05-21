@@ -104,8 +104,20 @@ namespace Freebris_client.Pages
                 download.Size = new Size(80, 40);
                 download.Text = "Get this book";
                 download.Visible = true;
-                download.Location = new Point(0, y+20);
-                download.Click += new EventHandler(Download_Click);
+                download.Location = new Point(0, y);
+                download.Click += new EventHandler(Delete_Click);
+
+                if (service.IsAdmin(username))
+                {
+                    Button delete = new Button();
+                    delete.Name = books.Rows[i]["name"].ToString();
+                    delete.Size = new Size(80, 40);
+                    delete.Text = "Delete";
+                    delete.Visible = true;
+                    delete.Location = new Point(0, y + 100);
+                    delete.Click += new EventHandler(Delete_Click);
+                    panel1.Controls.Add(delete);
+                }
 
                 Label path = new Label();
                 path.Name = books.Rows[i]["name"].ToString() + "label";
@@ -129,7 +141,7 @@ namespace Freebris_client.Pages
             }
         }
 
-        private void Download_Click(object sender, EventArgs e)
+        private void Delete_Click(object sender, EventArgs e)
         {
             int idUser = service.GetId(username);
             Button btn = (Button)sender;
