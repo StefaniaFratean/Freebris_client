@@ -22,6 +22,14 @@ namespace Freebris_client.Pages
             points.Text = service.GetPoints(username).ToString();
         }
 
+        private void RefreshPage()
+        {
+            this.Show();
+            this.Controls.Clear();
+            InitializeComponent();
+            points.Text = service.GetPoints(username).ToString();
+        }
+
         private void AdminPage_Load(object sender, EventArgs e)
         {
             DataTable users = service.GetAllUsers();

@@ -22,18 +22,26 @@ namespace Freebris_client.Pages
             this.typeAcc = typeAcc;
             InitializeComponent();
         }
-
+        private void RefreshPage()
+        {
+            this.Show();
+            this.Controls.Clear();
+            InitializeComponent();
+            points.Text = service.GetPoints(username).ToString();
+            DataTable books = service.GetAllBooks();
+            PrintBooks(books);
+        }
         private void YourBooksPage_Load(object sender, EventArgs e)
         {
             points.Text = service.GetPoints(username).ToString();
             DataTable books = service.GetBooksByAuthor(username);
-            PrintAllBooks(books);
+            PrintBooks(books);
             points.Text = service.GetPoints(username).ToString();
         }
 
 
 
-        private void PrintAllBooks(DataTable books)
+        private void PrintBooks(DataTable books)
         {
             panel1.Controls.Clear();
             panel1.AutoScroll = true;
@@ -112,7 +120,7 @@ namespace Freebris_client.Pages
                 MessageBox.Show("Your book had been deleted");
 
                 DataTable books = service.GetBooksByAuthor(username);
-                PrintAllBooks(books);
+                PrintBooks(books);
             }
         }
 

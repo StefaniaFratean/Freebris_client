@@ -131,6 +131,7 @@ namespace Freebris_client.Pages
                     int id = service.GetId(username);
                     service.SetIcon(id, int.Parse(btn.Name));
                     MessageBox.Show("Your icon had been set! ");
+                    RefreshPage();
                 }
             }
         }
@@ -138,6 +139,22 @@ namespace Freebris_client.Pages
         private void LogoutButton_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void RefreshPage()
+        {
+            this.Show();
+            this.Controls.Clear();
+            InitializeComponent();
+            tableLayoutPanelChangePass.Hide();
+            tableLayoutPanelChangeEmail.Hide();
+            ConfirmButton.Hide();
+            points.Text = service.GetPoints(username).ToString();
+
+        }
+
+        private void SettingsPage_Load(object sender, EventArgs e)
+        {
         }
     }
 }

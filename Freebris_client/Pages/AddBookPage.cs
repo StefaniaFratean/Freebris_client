@@ -24,7 +24,13 @@ namespace Freebris_client.Pages
             this.typeAcc = typeAcc;
             LoadIconPanel();
         }
-
+        private void RefreshPage()
+        {
+            this.Show();
+            this.Controls.Clear();
+            InitializeComponent();
+            points.Text = service.GetPoints(username).ToString();
+        }
         private void addbutton_Click(object sender, EventArgs e)
         {
             try
@@ -93,6 +99,12 @@ namespace Freebris_client.Pages
         private void AddBookPage_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

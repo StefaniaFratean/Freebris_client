@@ -105,7 +105,7 @@ namespace Freebris_client.Pages
                 download.Text = "Get this book";
                 download.Visible = true;
                 download.Location = new Point(0, y);
-                download.Click += new EventHandler(Delete_Click);
+                download.Click += new EventHandler(Download_Click);
 
                 if (service.IsAdmin(username))
                 {
@@ -114,7 +114,7 @@ namespace Freebris_client.Pages
                     delete.Size = new Size(80, 40);
                     delete.Text = "Delete";
                     delete.Visible = true;
-                    delete.Location = new Point(0, y + 100);
+                    delete.Location = new Point(0, y + 120);
                     delete.Click += new EventHandler(Delete_Click);
                     panel1.Controls.Add(delete);
                 }
@@ -127,7 +127,7 @@ namespace Freebris_client.Pages
 
                 Label points = new Label();
                 points.Text = "Points required: 20";
-                points.Location = new Point(0, y+100);
+                points.Location = new Point(0, y+60);
                 points.Visible = true;
 
                 panel1.Controls.Add(book);
@@ -142,6 +142,21 @@ namespace Freebris_client.Pages
         }
 
         private void Delete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete your book?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Button btn = (Button)sender;
+                int id = service.GetBookId(btn.Name);
+                service.DeleteBook(id);
+                MessageBox.Show("Your book had been deleted");
+
+                DataTable books = service.GetBooksByAuthor(username);
+                RefreshPage();
+            }
+        }
+
+        private void Download_Click(object sender, EventArgs e)
         {
             int idUser = service.GetId(username);
             Button btn = (Button)sender;
@@ -169,15 +184,32 @@ namespace Freebris_client.Pages
             ReviewsPage reviewsPage = new ReviewsPage(btn.Name, userId, typeAcc);
             reviewsPage.ShowDialog();
         }
-
+        private void RefreshPage()
+        {
+            this.Show();
+            this.Controls.Clear();
+            InitializeComponent();
+            points.Text = service.GetPoints(username).ToString();
+            DataTable books = service.GetAllBooks();
+            PrintBooks(books);
+        }
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
         private void MainPage_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void LogoutButton_Click(object sender, EventArgs e)
+        private void points_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
