@@ -21,6 +21,11 @@ namespace Freebris_client.Pages
             this.username = username;
             points.Text = service.GetPoints(username).ToString();
         }
+        private void AdminPage_Load(object sender, EventArgs e)
+        {
+            DataTable users = service.GetAllUsers();
+            DisplayUsers(users);
+        }
 
         private void RefreshPage()
         {
@@ -30,11 +35,6 @@ namespace Freebris_client.Pages
             points.Text = service.GetPoints(username).ToString();
         }
 
-        private void AdminPage_Load(object sender, EventArgs e)
-        {
-            DataTable users = service.GetAllUsers();
-            DisplayUsers(users);
-        }
 
         private void DisplayUsers(DataTable users)
         {
@@ -88,7 +88,8 @@ namespace Freebris_client.Pages
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this account?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this account?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
                 Button btn = (Button)sender;
@@ -96,7 +97,6 @@ namespace Freebris_client.Pages
                 MessageBox.Show("The account had been deleted");
                 DataTable users = service.GetAllUsers();
                 DisplayUsers(users);
-                // Logout!!!!!!!!!!!
             }
         }
 

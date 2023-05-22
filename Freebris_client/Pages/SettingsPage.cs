@@ -79,7 +79,8 @@ namespace Freebris_client.Pages
 
         private void DeleteAccountButton_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete your account?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete your account?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
                 int id = service.GetId(username);
@@ -123,7 +124,8 @@ namespace Freebris_client.Pages
 
         private void Icon_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Do you want to pick this profile icon?", "Icon", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show("Do you want to pick this profile icon?", "Icon",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 Button btn = (Button)sender;

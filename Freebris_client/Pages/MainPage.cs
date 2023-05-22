@@ -54,11 +54,6 @@ namespace Freebris_client.Pages
         {
             panel1.Controls.Clear();
             panel1.AutoScroll = true;
-
-            //DataTable books = service.GetAllBooks();
-
-
-            // flowLayoutPanel1.Controls.Add(dgv);
             int y=0;
             if(books.Rows.Count == 0)
             {
@@ -144,7 +139,8 @@ namespace Freebris_client.Pages
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete your book?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete your book?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
                 Button btn = (Button)sender;
@@ -156,7 +152,13 @@ namespace Freebris_client.Pages
                 RefreshPage();
             }
         }
-
+        private void Book_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            int userId = service.GetId(username);
+            ReviewsPage reviewsPage = new ReviewsPage(btn.Name, userId, typeAcc);
+            reviewsPage.ShowDialog();
+        }
         private void Download_Click(object sender, EventArgs e)
         {
             int idUser = service.GetId(username);
@@ -178,13 +180,6 @@ namespace Freebris_client.Pages
             MessageBox.Show("The book was sent on email!");
         }
 
-        private void Book_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            int userId = service.GetId(username);
-            ReviewsPage reviewsPage = new ReviewsPage(btn.Name, userId, typeAcc);
-            reviewsPage.ShowDialog();
-        }
         private void RefreshPage()
         {
             this.Show();

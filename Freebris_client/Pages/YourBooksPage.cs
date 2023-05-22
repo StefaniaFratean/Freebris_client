@@ -118,6 +118,7 @@ namespace Freebris_client.Pages
                 int id = service.GetBookId(btn.Name);
                 service.DeleteBook(id);
                 MessageBox.Show("Your book had been deleted");
+                RefreshPage();
 
                 DataTable books = service.GetBooksByAuthor(username);
                 PrintBooks(books);

@@ -22,7 +22,7 @@ namespace Freebris_client.Pages
             textBox2.Text = "";
             this.username = username;
             this.typeAcc = typeAcc;
-            label5.Text = service.GetPoints(username).ToString();
+            points.Text = service.GetPoints(username).ToString();
             LoadIconPanel();
         }
         private void RefreshPage()
@@ -32,6 +32,7 @@ namespace Freebris_client.Pages
             InitializeComponent();
             points.Text = service.GetPoints(username).ToString();
         }
+        // browse
         private void addbutton_Click(object sender, EventArgs e)
         {
             try
@@ -46,9 +47,8 @@ namespace Freebris_client.Pages
                     textBox1.Text = pathName;
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
-                // logs??
             }
         }
 
@@ -88,6 +88,7 @@ namespace Freebris_client.Pages
                         int idUser = service.GetId(username);
                         service.CreateBook(textBox2.Text, 0, idUser, int.Parse(btn.Name), textBox1.Text);
                         MessageBox.Show("Your book had been uploaded! ");
+                        RefreshPage();
                     }
                 }
             }
