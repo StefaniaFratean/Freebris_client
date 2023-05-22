@@ -22,6 +22,7 @@ namespace Freebris_client.Pages
             textBox2.Text = "";
             this.username = username;
             this.typeAcc = typeAcc;
+            label5.Text = service.GetPoints(username).ToString();
             LoadIconPanel();
         }
         private void RefreshPage()
@@ -105,6 +106,16 @@ namespace Freebris_client.Pages
         {
 
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void points_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

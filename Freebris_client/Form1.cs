@@ -54,6 +54,8 @@ namespace Freebris_client
                 else
                 {
                     MessageBox.Show("User created");
+                    this.Hide();
+                    
                 }
             }
             else
@@ -67,6 +69,16 @@ namespace Freebris_client
                     MessageBox.Show("Emails do not match!");
                 }
             }
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LayoutOverall_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -59,6 +59,7 @@ namespace Freebris_client.Pages
                     if(textBox1.Text != textBox3.Text)
                     {
                         service.ChangePassword(username, textBox3.Text);
+                        MessageBox.Show("The password is changed!");
                     }
                     else
                     {

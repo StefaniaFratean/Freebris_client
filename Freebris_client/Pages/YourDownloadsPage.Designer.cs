@@ -37,51 +37,61 @@ namespace Freebris_client.Pages
             // 
             // LogoutButton
             // 
-            this.LogoutButton.Location = new System.Drawing.Point(1285, 40);
+            this.LogoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
+            this.LogoutButton.FlatAppearance.BorderSize = 0;
+            this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoutButton.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.LogoutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
+            this.LogoutButton.Location = new System.Drawing.Point(914, 616);
+            this.LogoutButton.MaximumSize = new System.Drawing.Size(110, 44);
+            this.LogoutButton.MinimumSize = new System.Drawing.Size(110, 44);
             this.LogoutButton.Name = "LogoutButton";
-            this.LogoutButton.Size = new System.Drawing.Size(75, 32);
+            this.LogoutButton.Size = new System.Drawing.Size(110, 44);
             this.LogoutButton.TabIndex = 15;
             this.LogoutButton.Text = "Logout";
-            this.LogoutButton.UseVisualStyleBackColor = true;
+            this.LogoutButton.UseVisualStyleBackColor = false;
             this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // points
             // 
             this.points.AutoSize = true;
-            this.points.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.points.Location = new System.Drawing.Point(1307, 85);
+            this.points.Font = new System.Drawing.Font("Century Gothic", 8F);
+            this.points.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.points.Location = new System.Drawing.Point(971, 21);
             this.points.Name = "points";
-            this.points.Size = new System.Drawing.Size(53, 20);
+            this.points.Size = new System.Drawing.Size(65, 24);
             this.points.TabIndex = 14;
             this.points.Text = "label5";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1196, 85);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.label4.Location = new System.Drawing.Point(858, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 20);
+            this.label4.Size = new System.Drawing.Size(107, 21);
             this.label4.TabIndex = 13;
             this.label4.Text = "Your points:";
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(165, 151);
+            this.panel1.Location = new System.Drawing.Point(24, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1129, 769);
+            this.panel1.Size = new System.Drawing.Size(1000, 533);
             this.panel1.TabIndex = 16;
             // 
             // YourDownloadsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LogoutButton);
             this.Controls.Add(this.points);
             this.Controls.Add(this.label4);
             this.Name = "YourDownloadsPage";
-            this.Size = new System.Drawing.Size(1423, 1038);
+            this.Size = new System.Drawing.Size(1047, 680);
             this.Load += new System.EventHandler(this.YourDownloadsPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

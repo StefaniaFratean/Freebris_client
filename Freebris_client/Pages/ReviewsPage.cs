@@ -60,7 +60,7 @@ namespace Freebris_client.Pages
                     delete.Size = new Size(80, 40);
                     delete.Text = "Delete";
                     delete.Visible = true;
-                    delete.Location = new Point(0, y + 100);
+                    delete.Location = new Point(0, y + 60);
                     delete.Click += new EventHandler(Delete_Click);
                     panel1.Controls.Add(delete);
                 }

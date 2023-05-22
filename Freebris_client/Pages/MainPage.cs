@@ -88,6 +88,7 @@ namespace Freebris_client.Pages
                 tb.Text = books.Rows[i]["name"].ToString();
                 tb.Location = new Point(350, y);
                 tb.Visible = true;
+                tb.Size = new Size(200, 200);
 
                 Label tb2 = new Label();
                 string author = service.GetUsername(int.Parse(books.Rows[i]["idAuthor"].ToString()));
@@ -96,7 +97,7 @@ namespace Freebris_client.Pages
                     author = "unknown";
                 }
                 tb2.Text = author;
-                tb2.Location = new Point(620, y);
+                tb2.Location = new Point(590, y);
                 tb2.Visible = true;
 
                 Button download = new Button();
@@ -174,7 +175,7 @@ namespace Freebris_client.Pages
             service.AddPoints(idUser, -20);
             points.Text = service.GetPoints(username).ToString();
 
-            MessageBox.Show("The book was sended on email!");
+            MessageBox.Show("The book was sent on email!");
         }
 
         private void Book_Click(object sender, EventArgs e)

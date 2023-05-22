@@ -42,7 +42,6 @@ namespace Freebris_client.Pages
             this.ConfirmButton = new System.Windows.Forms.Button();
             this.tableLayoutPanelChangeEmail = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -52,121 +51,151 @@ namespace Freebris_client.Pages
             this.LogoutButton = new System.Windows.Forms.Button();
             this.points = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanelChangePass.SuspendLayout();
             this.tableLayoutPanelChangeEmail.SuspendLayout();
             this.SuspendLayout();
             // 
             // ChangePassButton
             // 
-            this.ChangePassButton.Location = new System.Drawing.Point(225, 148);
+            this.ChangePassButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
+            this.ChangePassButton.FlatAppearance.BorderSize = 0;
+            this.ChangePassButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChangePassButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangePassButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.ChangePassButton.Location = new System.Drawing.Point(40, 85);
             this.ChangePassButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChangePassButton.Name = "ChangePassButton";
-            this.ChangePassButton.Size = new System.Drawing.Size(193, 75);
+            this.ChangePassButton.Size = new System.Drawing.Size(162, 75);
             this.ChangePassButton.TabIndex = 0;
             this.ChangePassButton.Text = "Change Password";
-            this.ChangePassButton.UseVisualStyleBackColor = true;
+            this.ChangePassButton.UseVisualStyleBackColor = false;
             this.ChangePassButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(225, 286);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.button2.Location = new System.Drawing.Point(40, 182);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(193, 75);
+            this.button2.Size = new System.Drawing.Size(162, 75);
             this.button2.TabIndex = 1;
             this.button2.Text = "Change email";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // DeleteAccountButton
             // 
-            this.DeleteAccountButton.Location = new System.Drawing.Point(225, 566);
+            this.DeleteAccountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
+            this.DeleteAccountButton.FlatAppearance.BorderSize = 0;
+            this.DeleteAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteAccountButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteAccountButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.DeleteAccountButton.Location = new System.Drawing.Point(40, 377);
             this.DeleteAccountButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeleteAccountButton.Name = "DeleteAccountButton";
-            this.DeleteAccountButton.Size = new System.Drawing.Size(193, 75);
+            this.DeleteAccountButton.Size = new System.Drawing.Size(162, 75);
             this.DeleteAccountButton.TabIndex = 2;
             this.DeleteAccountButton.Text = "Delete account";
-            this.DeleteAccountButton.UseVisualStyleBackColor = true;
+            this.DeleteAccountButton.UseVisualStyleBackColor = false;
             this.DeleteAccountButton.Click += new System.EventHandler(this.DeleteAccountButton_Click);
             // 
             // tableLayoutPanelChangePass
             // 
             this.tableLayoutPanelChangePass.ColumnCount = 2;
-            this.tableLayoutPanelChangePass.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanelChangePass.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanelChangePass.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.36364F));
+            this.tableLayoutPanelChangePass.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.63636F));
             this.tableLayoutPanelChangePass.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanelChangePass.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanelChangePass.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanelChangePass.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanelChangePass.Controls.Add(this.textBox2, 1, 1);
             this.tableLayoutPanelChangePass.Controls.Add(this.textBox3, 1, 2);
-            this.tableLayoutPanelChangePass.Location = new System.Drawing.Point(601, 148);
+            this.tableLayoutPanelChangePass.Location = new System.Drawing.Point(247, 85);
             this.tableLayoutPanelChangePass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanelChangePass.Name = "tableLayoutPanelChangePass";
             this.tableLayoutPanelChangePass.RowCount = 3;
             this.tableLayoutPanelChangePass.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanelChangePass.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanelChangePass.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34F));
-            this.tableLayoutPanelChangePass.Size = new System.Drawing.Size(661, 401);
+            this.tableLayoutPanelChangePass.Size = new System.Drawing.Size(643, 367);
             this.tableLayoutPanelChangePass.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 17);
+            this.label1.Size = new System.Drawing.Size(125, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Old password";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 132);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.label2.Location = new System.Drawing.Point(3, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 17);
+            this.label2.Size = new System.Drawing.Size(133, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "New password";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 264);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.label3.Location = new System.Drawing.Point(3, 242);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 17);
+            this.label3.Size = new System.Drawing.Size(198, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Confirm new password";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(267, 2);
+            this.textBox1.Location = new System.Drawing.Point(236, 2);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(313, 22);
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(376, 22);
             this.textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(267, 134);
+            this.textBox2.Location = new System.Drawing.Point(236, 123);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(313, 22);
+            this.textBox2.PasswordChar = '*';
+            this.textBox2.Size = new System.Drawing.Size(376, 22);
             this.textBox2.TabIndex = 4;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(267, 266);
+            this.textBox3.Location = new System.Drawing.Point(236, 244);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(313, 22);
+            this.textBox3.PasswordChar = '*';
+            this.textBox3.Size = new System.Drawing.Size(376, 22);
             this.textBox3.TabIndex = 5;
             // 
             // ConfirmButton
             // 
-            this.ConfirmButton.Location = new System.Drawing.Point(785, 566);
+            this.ConfirmButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
+            this.ConfirmButton.FlatAppearance.BorderSize = 3;
+            this.ConfirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConfirmButton.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
+            this.ConfirmButton.Location = new System.Drawing.Point(514, 616);
             this.ConfirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ConfirmButton.Name = "ConfirmButton";
-            this.ConfirmButton.Size = new System.Drawing.Size(109, 39);
+            this.ConfirmButton.Size = new System.Drawing.Size(109, 44);
             this.ConfirmButton.TabIndex = 4;
             this.ConfirmButton.Text = "Confirm";
             this.ConfirmButton.UseVisualStyleBackColor = true;
@@ -175,106 +204,116 @@ namespace Freebris_client.Pages
             // tableLayoutPanelChangeEmail
             // 
             this.tableLayoutPanelChangeEmail.ColumnCount = 2;
-            this.tableLayoutPanelChangeEmail.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanelChangeEmail.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanelChangeEmail.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanelChangeEmail.Controls.Add(this.label5, 1, 0);
+            this.tableLayoutPanelChangeEmail.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.35002F));
+            this.tableLayoutPanelChangeEmail.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.64998F));
+            this.tableLayoutPanelChangeEmail.Controls.Add(this.textBox6, 1, 0);
             this.tableLayoutPanelChangeEmail.Controls.Add(this.label6, 0, 1);
             this.tableLayoutPanelChangeEmail.Controls.Add(this.label7, 0, 2);
             this.tableLayoutPanelChangeEmail.Controls.Add(this.textBox4, 1, 1);
             this.tableLayoutPanelChangeEmail.Controls.Add(this.textBox5, 1, 2);
-            this.tableLayoutPanelChangeEmail.Location = new System.Drawing.Point(601, 148);
+            this.tableLayoutPanelChangeEmail.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanelChangeEmail.Location = new System.Drawing.Point(247, 85);
             this.tableLayoutPanelChangeEmail.Name = "tableLayoutPanelChangeEmail";
             this.tableLayoutPanelChangeEmail.RowCount = 3;
             this.tableLayoutPanelChangeEmail.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanelChangeEmail.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanelChangeEmail.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34F));
-            this.tableLayoutPanelChangeEmail.Size = new System.Drawing.Size(661, 401);
+            this.tableLayoutPanelChangeEmail.Size = new System.Drawing.Size(643, 367);
             this.tableLayoutPanelChangeEmail.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 17);
+            this.label4.Size = new System.Drawing.Size(131, 21);
             this.label4.TabIndex = 0;
             this.label4.Text = "Current email: ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(267, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 17);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "your email";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 132);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.label6.Location = new System.Drawing.Point(3, 121);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 17);
+            this.label6.Size = new System.Drawing.Size(97, 21);
             this.label6.TabIndex = 2;
             this.label6.Text = "New email";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 264);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.label7.Location = new System.Drawing.Point(3, 242);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 17);
+            this.label7.Size = new System.Drawing.Size(162, 21);
             this.label7.TabIndex = 3;
             this.label7.Text = "Confirm new email";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(267, 135);
+            this.textBox4.Location = new System.Drawing.Point(236, 124);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(305, 22);
+            this.textBox4.Size = new System.Drawing.Size(376, 22);
             this.textBox4.TabIndex = 4;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(267, 267);
+            this.textBox5.Location = new System.Drawing.Point(236, 245);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(305, 22);
+            this.textBox5.Size = new System.Drawing.Size(376, 22);
             this.textBox5.TabIndex = 5;
             // 
             // IconButton
             // 
-            this.IconButton.Location = new System.Drawing.Point(225, 424);
+            this.IconButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
+            this.IconButton.FlatAppearance.BorderSize = 0;
+            this.IconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IconButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IconButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.IconButton.Location = new System.Drawing.Point(40, 279);
             this.IconButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.IconButton.Name = "IconButton";
-            this.IconButton.Size = new System.Drawing.Size(193, 75);
+            this.IconButton.Size = new System.Drawing.Size(162, 75);
             this.IconButton.TabIndex = 6;
             this.IconButton.Text = "Change icon";
-            this.IconButton.UseVisualStyleBackColor = true;
+            this.IconButton.UseVisualStyleBackColor = false;
             this.IconButton.Click += new System.EventHandler(this.IconButton_Click);
             // 
             // IconPanel
             // 
-            this.IconPanel.Location = new System.Drawing.Point(601, 148);
+            this.IconPanel.Location = new System.Drawing.Point(228, 458);
             this.IconPanel.Name = "IconPanel";
-            this.IconPanel.Size = new System.Drawing.Size(661, 796);
+            this.IconPanel.Size = new System.Drawing.Size(705, 130);
             this.IconPanel.TabIndex = 7;
             // 
             // LogoutButton
             // 
-            this.LogoutButton.Location = new System.Drawing.Point(1187, 27);
+            this.LogoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
+            this.LogoutButton.FlatAppearance.BorderSize = 0;
+            this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoutButton.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.LogoutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
+            this.LogoutButton.Location = new System.Drawing.Point(914, 616);
+            this.LogoutButton.MaximumSize = new System.Drawing.Size(110, 44);
+            this.LogoutButton.MinimumSize = new System.Drawing.Size(110, 44);
             this.LogoutButton.Name = "LogoutButton";
-            this.LogoutButton.Size = new System.Drawing.Size(75, 32);
+            this.LogoutButton.Size = new System.Drawing.Size(110, 44);
             this.LogoutButton.TabIndex = 15;
             this.LogoutButton.Text = "Logout";
-            this.LogoutButton.UseVisualStyleBackColor = true;
+            this.LogoutButton.UseVisualStyleBackColor = false;
             this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // points
             // 
             this.points.AutoSize = true;
-            this.points.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.points.Location = new System.Drawing.Point(1209, 72);
+            this.points.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.points.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.points.Location = new System.Drawing.Point(971, 21);
             this.points.Name = "points";
             this.points.Size = new System.Drawing.Size(53, 20);
             this.points.TabIndex = 14;
@@ -283,17 +322,26 @@ namespace Freebris_client.Pages
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1098, 72);
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.label8.Location = new System.Drawing.Point(858, 20);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 20);
+            this.label8.Size = new System.Drawing.Size(107, 21);
             this.label8.TabIndex = 13;
             this.label8.Text = "Your points:";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(236, 3);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(376, 22);
+            this.textBox6.TabIndex = 16;
             // 
             // SettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
             this.Controls.Add(this.LogoutButton);
             this.Controls.Add(this.points);
             this.Controls.Add(this.label8);
@@ -307,7 +355,7 @@ namespace Freebris_client.Pages
             this.Controls.Add(this.ChangePassButton);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SettingsPage";
-            this.Size = new System.Drawing.Size(1423, 1038);
+            this.Size = new System.Drawing.Size(1053, 684);
             this.Load += new System.EventHandler(this.SettingsPage_Load);
             this.tableLayoutPanelChangePass.ResumeLayout(false);
             this.tableLayoutPanelChangePass.PerformLayout();
@@ -333,7 +381,6 @@ namespace Freebris_client.Pages
         private System.Windows.Forms.Button ConfirmButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelChangeEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
@@ -343,5 +390,6 @@ namespace Freebris_client.Pages
         private System.Windows.Forms.Button LogoutButton;
         private System.Windows.Forms.Label points;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
