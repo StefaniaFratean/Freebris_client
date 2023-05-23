@@ -23,7 +23,8 @@ namespace Freebris_client.Pages
             this.username = username;
             this.typeAcc = typeAcc;
             points.Text = service.GetPoints(username).ToString();
-            iconbox.ImageLocation = service.GetIcon(service.GetId(username));
+            int idIcon = service.GetIconForUser(username);
+            iconbox.ImageLocation = service.GetIcon(idIcon);
             LoadIconPanel();
 
         }
@@ -33,6 +34,8 @@ namespace Freebris_client.Pages
             this.Controls.Clear();
             InitializeComponent();
             points.Text = service.GetPoints(username).ToString();
+            int idIcon = service.GetIconForUser(username);
+            iconbox.ImageLocation = service.GetIcon(idIcon);
         }
         // browse
         private void addbutton_Click(object sender, EventArgs e)

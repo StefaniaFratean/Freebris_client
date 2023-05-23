@@ -177,6 +177,13 @@ namespace Freebris_client.FreebrisServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetIconBook", ReplyAction="*")]
         System.Threading.Tasks.Task<string> GetIconBookAsync(int id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetIconForUser", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int GetIconForUser(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetIconForUser", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> GetIconForUserAsync(string username);
+        
         [System.ServiceModel.OperationContractAttribute(Action="FreebrisServer/GetUsername", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         string GetUsername(int id);
@@ -457,6 +464,14 @@ namespace Freebris_client.FreebrisServiceReference {
         
         public System.Threading.Tasks.Task<string> GetIconBookAsync(int id) {
             return base.Channel.GetIconBookAsync(id);
+        }
+        
+        public int GetIconForUser(string username) {
+            return base.Channel.GetIconForUser(username);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetIconForUserAsync(string username) {
+            return base.Channel.GetIconForUserAsync(username);
         }
         
         public string GetUsername(int id) {

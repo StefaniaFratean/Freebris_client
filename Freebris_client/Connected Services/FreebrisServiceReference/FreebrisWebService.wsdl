@@ -334,6 +334,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetIconForUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIconForUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetIconForUserResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="GetUsername">
         <s:complexType>
           <s:sequence>
@@ -632,6 +646,12 @@
   <wsdl:message name="GetIconBookSoapOut">
     <wsdl:part name="parameters" element="tns:GetIconBookResponse" />
   </wsdl:message>
+  <wsdl:message name="GetIconForUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIconForUser" />
+  </wsdl:message>
+  <wsdl:message name="GetIconForUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIconForUserResponse" />
+  </wsdl:message>
   <wsdl:message name="GetUsernameSoapIn">
     <wsdl:part name="parameters" element="tns:GetUsername" />
   </wsdl:message>
@@ -784,6 +804,10 @@
     <wsdl:operation name="GetIconBook">
       <wsdl:input message="tns:GetIconBookSoapIn" />
       <wsdl:output message="tns:GetIconBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIconForUser">
+      <wsdl:input message="tns:GetIconForUserSoapIn" />
+      <wsdl:output message="tns:GetIconForUserSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="GetUsername">
       <wsdl:input message="tns:GetUsernameSoapIn" />
@@ -1028,6 +1052,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetIconBook">
       <soap:operation soapAction="FreebrisServer/GetIconBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIconForUser">
+      <soap:operation soapAction="FreebrisServer/GetIconForUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1328,6 +1361,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetIconBook">
       <soap12:operation soapAction="FreebrisServer/GetIconBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIconForUser">
+      <soap12:operation soapAction="FreebrisServer/GetIconForUser" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -20,6 +20,8 @@ namespace Freebris_client.Pages
             InitializeComponent();
             this.username = username;
             points.Text = service.GetPoints(username).ToString();
+            int idIcon = service.GetIconForUser(username);
+            iconbox.ImageLocation = service.GetIcon(idIcon);
         }
         private void AdminPage_Load(object sender, EventArgs e)
         {
@@ -33,6 +35,8 @@ namespace Freebris_client.Pages
             this.Controls.Clear();
             InitializeComponent();
             points.Text = service.GetPoints(username).ToString();
+            int idIcon = service.GetIconForUser(username);
+            iconbox.ImageLocation = service.GetIcon(idIcon);
         }
 
 

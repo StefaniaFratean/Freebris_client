@@ -22,7 +22,8 @@ namespace Freebris_client.Pages
             this.typeAcc = typeAcc;
             InitializeComponent();
             points.Text = service.GetPoints(username).ToString();
-            iconbox.ImageLocation = service.GetIcon(service.GetId(username));
+            int idIcon = service.GetIconForUser(username);
+            iconbox.ImageLocation = service.GetIcon(idIcon);
         }
 
         private void YourDownloadsPage_Load(object sender, EventArgs e)
@@ -30,6 +31,8 @@ namespace Freebris_client.Pages
             int id = service.GetId(username);
             DataTable books = service.GetDownloadedBooksByUser(id);
             PrintBooks(books);
+            int idIcon = service.GetIconForUser(username);
+            iconbox.ImageLocation = service.GetIcon(idIcon);
         }
 
         private void PrintBooks(DataTable books)

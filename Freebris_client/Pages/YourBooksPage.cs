@@ -21,7 +21,8 @@ namespace Freebris_client.Pages
             this.username = username;
             this.typeAcc = typeAcc;
             InitializeComponent();
-            iconbox.ImageLocation = service.GetIcon(service.GetId(username));
+            int idIcon = service.GetIconForUser(username);
+            iconbox.ImageLocation = service.GetIcon(idIcon);
         }
         private void RefreshPage()
         {
@@ -138,6 +139,8 @@ namespace Freebris_client.Pages
         private void LogoutButton_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+            int idIcon = service.GetIconForUser(username);
+            iconbox.ImageLocation = service.GetIcon(idIcon);
         }
 
         private void label1_Click(object sender, EventArgs e)
