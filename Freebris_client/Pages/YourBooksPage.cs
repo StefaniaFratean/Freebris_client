@@ -21,6 +21,7 @@ namespace Freebris_client.Pages
             this.username = username;
             this.typeAcc = typeAcc;
             InitializeComponent();
+            iconbox.ImageLocation = service.GetIcon(service.GetId(username));
         }
         private void RefreshPage()
         {

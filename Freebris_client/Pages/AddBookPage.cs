@@ -23,7 +23,9 @@ namespace Freebris_client.Pages
             this.username = username;
             this.typeAcc = typeAcc;
             points.Text = service.GetPoints(username).ToString();
+            iconbox.ImageLocation = service.GetIcon(service.GetId(username));
             LoadIconPanel();
+
         }
         private void RefreshPage()
         {

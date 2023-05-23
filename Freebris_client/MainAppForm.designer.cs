@@ -55,7 +55,7 @@ namespace Freebris_client
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1401, 685);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1401, 927);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -79,7 +79,7 @@ namespace Freebris_client
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.33181F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.33181F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.00912F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(344, 679);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(344, 921);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // AddBookButton
@@ -91,9 +91,9 @@ namespace Freebris_client
             this.AddBookButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBookButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBookButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
-            this.AddBookButton.Location = new System.Drawing.Point(3, 391);
+            this.AddBookButton.Location = new System.Drawing.Point(3, 527);
             this.AddBookButton.Name = "AddBookButton";
-            this.AddBookButton.Size = new System.Drawing.Size(338, 91);
+            this.AddBookButton.Size = new System.Drawing.Size(338, 125);
             this.AddBookButton.TabIndex = 4;
             this.AddBookButton.Text = "Add a book";
             this.AddBookButton.UseVisualStyleBackColor = false;
@@ -110,7 +110,7 @@ namespace Freebris_client
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(338, 91);
+            this.button1.Size = new System.Drawing.Size(338, 125);
             this.button1.TabIndex = 0;
             this.button1.Text = "Home page";
             this.button1.UseVisualStyleBackColor = false;
@@ -125,9 +125,9 @@ namespace Freebris_client
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
-            this.button2.Location = new System.Drawing.Point(3, 100);
+            this.button2.Location = new System.Drawing.Point(3, 134);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(338, 91);
+            this.button2.Size = new System.Drawing.Size(338, 125);
             this.button2.TabIndex = 1;
             this.button2.Text = "Settings";
             this.button2.UseVisualStyleBackColor = false;
@@ -142,9 +142,9 @@ namespace Freebris_client
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
-            this.button3.Location = new System.Drawing.Point(3, 197);
+            this.button3.Location = new System.Drawing.Point(3, 265);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(338, 91);
+            this.button3.Size = new System.Drawing.Size(338, 125);
             this.button3.TabIndex = 2;
             this.button3.Text = "Your books";
             this.button3.UseVisualStyleBackColor = false;
@@ -159,9 +159,9 @@ namespace Freebris_client
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
-            this.button4.Location = new System.Drawing.Point(3, 294);
+            this.button4.Location = new System.Drawing.Point(3, 396);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(338, 91);
+            this.button4.Size = new System.Drawing.Size(338, 125);
             this.button4.TabIndex = 3;
             this.button4.Text = "Your downloads";
             this.button4.UseVisualStyleBackColor = false;
@@ -176,9 +176,9 @@ namespace Freebris_client
             this.AdminButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdminButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
-            this.AdminButton.Location = new System.Drawing.Point(3, 488);
+            this.AdminButton.Location = new System.Drawing.Point(3, 658);
             this.AdminButton.Name = "AdminButton";
-            this.AdminButton.Size = new System.Drawing.Size(338, 91);
+            this.AdminButton.Size = new System.Drawing.Size(338, 125);
             this.AdminButton.TabIndex = 5;
             this.AdminButton.Text = "Manage Users";
             this.AdminButton.UseVisualStyleBackColor = false;
@@ -190,7 +190,7 @@ namespace Freebris_client
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(353, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1045, 679);
+            this.panel1.Size = new System.Drawing.Size(1045, 921);
             this.panel1.TabIndex = 1;
             // 
             // MainAppForm
@@ -198,7 +198,7 @@ namespace Freebris_client
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
-            this.ClientSize = new System.Drawing.Size(1401, 685);
+            this.ClientSize = new System.Drawing.Size(1401, 927);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

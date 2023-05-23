@@ -22,6 +22,7 @@ namespace Freebris_client.Pages
             this.typeAcc = typeAcc;
             InitializeComponent();
             points.Text = service.GetPoints(username).ToString();
+            iconbox.ImageLocation = service.GetIcon(service.GetId(username));
         }
 
         private void YourDownloadsPage_Load(object sender, EventArgs e)

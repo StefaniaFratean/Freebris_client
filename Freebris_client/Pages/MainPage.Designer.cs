@@ -29,6 +29,7 @@ namespace Freebris_client.Pages
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -41,6 +42,8 @@ namespace Freebris_client.Pages
             this.label4 = new System.Windows.Forms.Label();
             this.points = new System.Windows.Forms.Label();
             this.LogoutButton = new System.Windows.Forms.Button();
+            this.iconbox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.iconbox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +61,7 @@ namespace Freebris_client.Pages
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(23, 96);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(871, 30);
+            this.textBox1.Size = new System.Drawing.Size(1001, 30);
             this.textBox1.TabIndex = 1;
             // 
             // radioButton1
@@ -114,7 +117,7 @@ namespace Freebris_client.Pages
             this.searchButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
             this.searchButton.Location = new System.Drawing.Point(794, 144);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(100, 39);
+            this.searchButton.Size = new System.Drawing.Size(230, 39);
             this.searchButton.TabIndex = 7;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = false;
@@ -124,7 +127,7 @@ namespace Freebris_client.Pages
             // 
             this.panel1.Location = new System.Drawing.Point(23, 224);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(871, 436);
+            this.panel1.Size = new System.Drawing.Size(1001, 598);
             this.panel1.TabIndex = 8;
             // 
             // radioButton3
@@ -158,7 +161,7 @@ namespace Freebris_client.Pages
             this.points.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
             this.points.Location = new System.Drawing.Point(971, 21);
             this.points.Name = "points";
-            this.points.Size = new System.Drawing.Size(66, 25);
+            this.points.Size = new System.Drawing.Size(53, 20);
             this.points.TabIndex = 11;
             this.points.Text = "label5";
             this.points.Click += new System.EventHandler(this.points_Click);
@@ -170,7 +173,7 @@ namespace Freebris_client.Pages
             this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutButton.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.LogoutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
-            this.LogoutButton.Location = new System.Drawing.Point(914, 616);
+            this.LogoutButton.Location = new System.Drawing.Point(914, 844);
             this.LogoutButton.MaximumSize = new System.Drawing.Size(110, 44);
             this.LogoutButton.MinimumSize = new System.Drawing.Size(110, 44);
             this.LogoutButton.Name = "LogoutButton";
@@ -180,11 +183,22 @@ namespace Freebris_client.Pages
             this.LogoutButton.UseVisualStyleBackColor = false;
             this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
+            // iconbox
+            // 
+            this.iconbox.InitialImage = ((System.Drawing.Image)(resources.GetObject("iconbox.InitialImage")));
+            this.iconbox.Location = new System.Drawing.Point(768, 3);
+            this.iconbox.Name = "iconbox";
+            this.iconbox.Size = new System.Drawing.Size(75, 60);
+            this.iconbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconbox.TabIndex = 19;
+            this.iconbox.TabStop = false;
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
+            this.Controls.Add(this.iconbox);
             this.Controls.Add(this.LogoutButton);
             this.Controls.Add(this.points);
             this.Controls.Add(this.label4);
@@ -198,8 +212,9 @@ namespace Freebris_client.Pages
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "MainPage";
-            this.Size = new System.Drawing.Size(1047, 680);
+            this.Size = new System.Drawing.Size(1051, 925);
             this.Load += new System.EventHandler(this.MainPage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.iconbox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +234,6 @@ namespace Freebris_client.Pages
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label points;
         private System.Windows.Forms.Button LogoutButton;
+        private System.Windows.Forms.PictureBox iconbox;
     }
 }

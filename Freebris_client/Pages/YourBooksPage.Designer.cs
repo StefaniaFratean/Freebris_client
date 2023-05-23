@@ -29,11 +29,14 @@ namespace Freebris_client.Pages
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YourBooksPage));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.points = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.LogoutButton = new System.Windows.Forms.Button();
+            this.iconbox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.iconbox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +54,7 @@ namespace Freebris_client.Pages
             // 
             this.panel1.Location = new System.Drawing.Point(29, 90);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(995, 500);
+            this.panel1.Size = new System.Drawing.Size(995, 728);
             this.panel1.TabIndex = 9;
             // 
             // points
@@ -83,7 +86,7 @@ namespace Freebris_client.Pages
             this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
-            this.LogoutButton.Location = new System.Drawing.Point(914, 616);
+            this.LogoutButton.Location = new System.Drawing.Point(914, 846);
             this.LogoutButton.MaximumSize = new System.Drawing.Size(110, 44);
             this.LogoutButton.MinimumSize = new System.Drawing.Size(110, 44);
             this.LogoutButton.Name = "LogoutButton";
@@ -93,11 +96,22 @@ namespace Freebris_client.Pages
             this.LogoutButton.UseVisualStyleBackColor = false;
             this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
+            // iconbox
+            // 
+            this.iconbox.InitialImage = ((System.Drawing.Image)(resources.GetObject("iconbox.InitialImage")));
+            this.iconbox.Location = new System.Drawing.Point(765, 13);
+            this.iconbox.Name = "iconbox";
+            this.iconbox.Size = new System.Drawing.Size(75, 60);
+            this.iconbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconbox.TabIndex = 17;
+            this.iconbox.TabStop = false;
+            // 
             // YourBooksPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
+            this.Controls.Add(this.iconbox);
             this.Controls.Add(this.LogoutButton);
             this.Controls.Add(this.points);
             this.Controls.Add(this.label4);
@@ -105,8 +119,9 @@ namespace Freebris_client.Pages
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "YourBooksPage";
-            this.Size = new System.Drawing.Size(1047, 680);
+            this.Size = new System.Drawing.Size(1049, 924);
             this.Load += new System.EventHandler(this.YourBooksPage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.iconbox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,5 +134,6 @@ namespace Freebris_client.Pages
         private System.Windows.Forms.Label points;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button LogoutButton;
+        private System.Windows.Forms.PictureBox iconbox;
     }
 }

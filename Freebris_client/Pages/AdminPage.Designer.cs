@@ -39,7 +39,7 @@ namespace Freebris_client.Pages
             // 
             this.panel1.Location = new System.Drawing.Point(24, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 548);
+            this.panel1.Size = new System.Drawing.Size(1000, 758);
             this.panel1.TabIndex = 0;
             // 
             // LogoutButton
@@ -49,7 +49,7 @@ namespace Freebris_client.Pages
             this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
-            this.LogoutButton.Location = new System.Drawing.Point(914, 616);
+            this.LogoutButton.Location = new System.Drawing.Point(914, 851);
             this.LogoutButton.MaximumSize = new System.Drawing.Size(110, 44);
             this.LogoutButton.MinimumSize = new System.Drawing.Size(110, 44);
             this.LogoutButton.Name = "LogoutButton";
@@ -80,7 +80,7 @@ namespace Freebris_client.Pages
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
             this.label4.Location = new System.Drawing.Point(858, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 26);
+            this.label4.Size = new System.Drawing.Size(107, 21);
             this.label4.TabIndex = 17;
             this.label4.Text = "Your points:";
             // 
@@ -94,7 +94,7 @@ namespace Freebris_client.Pages
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Name = "AdminPage";
-            this.Size = new System.Drawing.Size(1047, 680);
+            this.Size = new System.Drawing.Size(1048, 925);
             this.Load += new System.EventHandler(this.AdminPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

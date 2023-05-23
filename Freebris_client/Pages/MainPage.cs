@@ -24,6 +24,7 @@ namespace Freebris_client.Pages
             DataTable books = service.GetAllBooks();
             PrintBooks(books);
             points.Text = service.GetPoints(username).ToString();
+            iconbox.ImageLocation = service.GetIcon(service.GetId(username));
         }
 
         private void searchButton_Click(object sender, EventArgs e)
