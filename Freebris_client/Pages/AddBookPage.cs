@@ -93,6 +93,7 @@ namespace Freebris_client.Pages
                         int idUser = service.GetId(username);
                         service.CreateBook(textBox2.Text, 0, idUser, int.Parse(btn.Name), textBox1.Text);
                         MessageBox.Show("Your book had been uploaded! ");
+                        service.AddPoints(idUser, 20);
                         RefreshPage();
                     }
                 }
